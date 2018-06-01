@@ -1,0 +1,1 @@
+CREATE TABLE `jukebox`.`songs` ( `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT , `name` VARCHAR(127) NOT NULL , `code` VARCHAR(127) NOT NULL , `description` TEXT NOT NULL , `author` VARCHAR(127) NOT NULL , PRIMARY KEY (`id`)) ENGINE = InnoDB;
