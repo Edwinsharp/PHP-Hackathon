@@ -5,6 +5,7 @@ namespace app\Http\controllers;
 use \polakjan\mvc\db;
 use app\Song;
 
+
 class InsertsongController
 {
     public function index()
@@ -12,7 +13,7 @@ class InsertsongController
         
          if (!empty($_GET['id'])) {
              // retrieve existing SONG from database
-                
+              $song = Song::find($_GET['id']);
          } else {
              // create empty SONG
             $song = new Song;
@@ -40,9 +41,9 @@ class InsertsongController
             // if validation did not encounter any errors
             if ($data_is_valid) {
                 // save the data
-               $song -> insert();
+               $song -> save();
                 // redirect (ideally to the edit page of the inserted song)
-               header('Location: ?page=insertsong');
+               header('Location: ?page=insertsong&id='.$song->id);
             }
         }
 

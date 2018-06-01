@@ -3,6 +3,8 @@
 namespace app;
 
 use \polakjan\mvc\db;
+use PDO;
+
 
 /**
  * represents one row in the table `product`
@@ -46,7 +48,7 @@ class Song
             SET `name` = ?,
                 `code` = ?,
                 `description` = ?,
-                `author` = ?,
+                `author` = ?
             WHERE `id` = ?
         ";
         $values = [
