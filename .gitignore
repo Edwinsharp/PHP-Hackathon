@@ -9,3 +9,7 @@ node_modules/
 # Project 
 
 config/app.php
+
+# Apple folder file
+
+.DS_Store
