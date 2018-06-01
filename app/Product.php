@@ -1,5 +1,5 @@
 <?php
-
+// The modal
 namespace app;
 
 use \polakjan\mvc\db;
@@ -12,28 +12,25 @@ class Product
     // properties represent the columns of the table
     public $id = null;
     public $name = null;
+    public $code = null;
     public $description = null;
-    public $price = null;
-    public $unit_qty = 1;
-    public $amount_in_stock = 0;
-    public $is_top = 0;
+    public $author = null;
+    
 
     public function insert()
     {
         $query = "
             INSERT
-            INTO `product`
-            (`name`, `description`, `price`, `unit_qty`, `amount_in_stock`, `is_top`)
+            INTO `songs`
+            (`name`, `code`, `description`, `author`)
             VALUES
-            (?, ?, ?, ?, ?, ?)
+            (?, ?, ?, ?)
         ";
         $values = [
             $this->name,
+            $this->code,
             $this->description,
-            $this->price,
-            $this->unit_qty,
-            $this->amount_in_stock,
-            $this->is_top
+            $this->author,
         ];
 
         db::query($query, $values);
