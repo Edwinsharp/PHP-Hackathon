@@ -8,4 +8,4 @@ node_modules/
 
 # Project 
 
-public/css/
+config/app.php
