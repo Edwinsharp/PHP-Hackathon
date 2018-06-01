@@ -7,7 +7,7 @@ use \polakjan\mvc\db;
 /**
  * represents one row in the table `product`
  */
-class Product
+class Song
 {
     // properties represent the columns of the table
     public $id = null;

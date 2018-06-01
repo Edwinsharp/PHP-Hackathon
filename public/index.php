@@ -7,7 +7,7 @@ use \polakjan\mvc\routing\getControllerFromUrl as the_function_that_gets_the_con
 require_once '../config/app.php';
 require_once '../vendor/polakjan/mvc/routing.php';
 require_once '../vendor/polakjan/mvc/db.php';
-require_once '../app/Product.php';
+require_once '../app/Song.php';
 
 // ROUTING
 // http://www.eshop.test - handle by homepage controller
